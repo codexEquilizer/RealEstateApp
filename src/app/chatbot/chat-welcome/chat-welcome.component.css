@@ -1,0 +1,38 @@
+.chat-welcome__container {
+  padding: 12px;
+  overflow-y: auto;
+}
+
+.chat-welcome__title {
+  /* font-weight: 600; */
+  font-size: 16px;
+}
+
+.chat-welcome__description {
+  max-width: 600px;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+.chat-welcome__button {
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--primary-color);
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.chat-welcome__button_one {
+  margin-top: 24px;
+}
+
+.chat-welcome__button_two {
+  margin-bottom: 35%
+}
+
+.chat-welcome__button:hover {
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+}

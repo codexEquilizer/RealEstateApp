@@ -1,0 +1,43 @@
+ <div class="page-bg">
+    <div class="welcome-container">
+      <h1 class="welcome-text">Welcome to Facility Services</h1>
+      <h3 class="welcome-text">Find services, submit facility requests, and get support.</h3>
+    </div>
+
+    <!-- Floating Chat Widget -->
+    <div class="chat-widget">
+      <!-- Header -->
+      <div class="chat-header">
+        <div>
+          KP FVA
+          <span class="sub-title">Facility Virtual Agent</span>
+        </div>
+        <span class="chat-exit"><button>X</button></span>
+      </div>
+
+      <!-- Chat Banner -->
+      <div class="chat-banner">
+        <span class="chat-banner-text">Welcome</span>
+        <!-- <span class="chat-banner-icon">chatIcon</span> -->
+      </div>
+
+      <!-- Messages -->
+      @if (messages.length > 0) {
+      <div class="chat-body">
+        <div *ngFor="let msg of messages" class="bubble" [ngClass]="msg.from">
+          <div class="text">{{ msg.text }}</div>
+          <div class="time">{{ msg.time }}</div>
+        </div>
+      </div>
+      } @else {
+      <!-- Welcome template -->
+      <app-chat-welcome></app-chat-welcome>
+      }
+
+      <!-- Input -->
+      <div class="chat-input">
+        <input [(ngModel)]="message" placeholder="Type your message" (keyup.enter)="send()" />
+        <button (click)="send()">➤</button>
+      </div>
+    </div>
+  </div>

@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #00265d;
+  --secondary-color: #e4e7ec;
+  --third-color: #003c77;
+  --background-color: #00265d;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 32px;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.secondary_button {
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--primary-color);
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.secondary_button:hover {
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+}
